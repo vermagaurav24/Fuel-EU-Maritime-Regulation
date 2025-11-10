@@ -1,0 +1,28 @@
+/**
+ * Route Data Transfer Objects
+ */
+
+export interface RouteDTO {
+  id: number;
+  routeId: string;
+  vesselType: string;
+  fuelType: string;
+  year: number;
+  ghgIntensity: number;
+  fuelConsumption: number;
+  distance: number;
+  totalEmissions: number;
+  isBaseline: boolean;
+}
+
+export interface RouteFilterDTO {
+  vesselType?: string;
+  fuelType?: string;
+  year?: number;
+}
+
+export interface SetBaselineResponseDTO {
+  success: boolean;
+  message: string;
+  data: RouteDTO;
+}
