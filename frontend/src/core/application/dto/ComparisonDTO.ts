@@ -1,4 +1,4 @@
-import { RouteDTO } from './RouteDTO';
+import type { RouteDTO } from './RouteDTO';
 
 /**
  * Comparison Data Transfer Objects
@@ -15,3 +15,7 @@ export interface ComparisonResponseDTO {
   comparisons: ComparisonItemDTO[];
   targetIntensity: number;
 }
+
+// Export all types together for convenience
+export type { RouteDTO } from './RouteDTO';
+export type { RouteFilterDTO, SetBaselineResponseDTO } from './RouteDTO';
